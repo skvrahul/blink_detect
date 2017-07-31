@@ -133,8 +133,13 @@ while True:
         x.append(frame_no);
         y.append(l_EAR);
     cv2.imshow('my webcam', img)
-    if cv2.waitKey(1) == 1048603: #Escape clicked.Exit program
+    waitKey = cv2.waitKey(1)
+    if waitKey == 27: #Escape clicked.Exit program
         break
+    elif waitKey == 114:#'R' Clicked.Reset Counter 
+	L_BLINK_COUNTER = 0
+	R_BLINK_COUNTER = 0
+
 cv2.destroyAllWindows()
 
 
